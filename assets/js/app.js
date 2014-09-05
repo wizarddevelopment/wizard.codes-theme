@@ -11,7 +11,7 @@ if( navigator.userAgent.match(/Android/i) ||
   isMobile = true;
 }
 
-$(document).ready(function() {
+$(function() {
 
   // Global vars
   var $artHeaderInner = $('.art-header-inner');
@@ -112,4 +112,10 @@ $(document).ready(function() {
 
   // trigger a recalc if we're already scrolled
   slidingTitle();
+
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+
 });
