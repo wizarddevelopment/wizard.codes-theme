@@ -1,6 +1,11 @@
+# To install on ghost.org
+
+ - go here https://ghost.org/blogs/wizarddev/
+ - upload a zip of this theme
+
 # Bentley
 
-Bentley is a minimal and responsive [Ghost](http://ghost.org) theme focusing on your content. With smooth and slick javascripts transitions, the experience is elegant and simple - just like the Ghost blogging platform. 
+Bentley is a minimal and responsive [Ghost](http://ghost.org) theme focusing on your content. With smooth and slick javascripts transitions, the experience is elegant and simple - just like the Ghost blogging platform.
 
 ## Demo
 
@@ -18,7 +23,7 @@ Expect updates - this theme is maturing along with Ghost. Feel free to [add sugg
 
 4. On settings page, select rollsroyce as theme and save.
 
-5. To make custom changes, go to ```default.hbs``` and search for 'TODOs' to add things like twitter handle, google analytics ID, etc. This is a temporary fix to a problem in Ghost v0.4. 
+5. To make custom changes, go to ```default.hbs``` and search for 'TODOs' to add things like twitter handle, google analytics ID, etc. This is a temporary fix to a problem in Ghost v0.4.
 
 *Note:* Ping me (alson[at]caffein8[dot]com) if you have any issues.
 
@@ -53,7 +58,7 @@ See the [changelog](CHANGELOG.md) for release details.
 
 ## Thanks
 
-Thanks to [@roycehaynes](https://twitter.com/roycehaynes), the original porter of the theme to Ghost as well as the Ghost team for creating this blog platform. 
+Thanks to [@roycehaynes](https://twitter.com/roycehaynes), the original porter of the theme to Ghost as well as the Ghost team for creating this blog platform.
 
 Special shout out to [Dave Gamache](http://blog.davegamache.com/articles), the original designer.
 
