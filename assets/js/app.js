@@ -1,21 +1,9 @@
-var isMobile;
-
-// Identify if visitor on mobile with lame sniffing to remove parallaxing title
-if( navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPod/i) ||
-    navigator.userAgent.match(/iPad/i) ||
-    navigator.userAgent.match(/BlackBerry/)
-){
-  isMobile = true;
-}
-
 $(function() {
 
   // Global vars
   var $artHeaderInner = $('.art-header-inner');
   var $artHeader = $('.art-header');
+  var artHeaderHeight = $artHeader.height();
   var $artTitle = $('.art-title');
   var $artSubtitle = $('.art-subtitle');
   var $artTime = $('.art-time');
@@ -35,41 +23,60 @@ $(function() {
     }
   }
 
-  // If large viewport and not mobile, parallax the title
-  if(!isMobile) {
-    $(window).scroll(function() {
-      if(isLargeViewport()) {
-        slidingTitle();
-      }
-    });
+  // If large viewport parallax the title
+  if(isLargeViewport()) {
+    $(window).scroll(slidingTitle);
   }
 
-  // Window gets large enough, need to recalc all parallaxing title values
-  $(window).resize(function() {
-    if(isLargeViewport()) {
-      slidingTitle();
-    }
-  });
+  // trigger a recalc if we're already scrolled
+  slidingTitle();
 
   // Functional parallaxing calculations
   function slidingTitle() {
-    //Get scroll position of window
-    windowScroll = $(this).scrollTop();
+    var windowScroll = window.pageYOffset || $(window).scrollTop();
 
-    //Slow scroll of .art-header-inner scroll and fade it out
-    $artHeaderInner.css({
-      'margin-top' : -(windowScroll/3)+"px",
-      'opacity' : 1-(windowScroll/550)
-    });
+    fadeHeader(windowScroll);
+    fadeArt(windowScroll);
+    fadeNav(windowScroll);
+  }
 
-    //Slowly parallax the background of .art-header
+  function fadeArt(windowScroll){
+   //Slowly parallax the background of .art-header
+    var offset = 0 - windowScroll / 8;
+    var maxOffset = 0 - (artHeaderHeight / 8 );
+    if (maxOffset > offset){
+      offset = maxOffset;
+      console.log(offset, maxOffset);
+    }
+
     $artHeader.css({
-      'background-position' : 'center ' + (-windowScroll/8)+"px"
+      'background-position' : 'center ' + offset + "px"
     });
+  }
 
+  function fadeHeader(windowScroll){
+    //Slow scroll of .art-header-inner scroll and fade it out
+    var opacity = 1-(windowScroll/550);
+    var marginTop = 0 - (windowScroll/3)+"px";
+    if (opacity < 0){
+      opacity = 0;
+      marginTop = 550;
+    }
+
+    $artHeaderInner.css({
+      'margin-top' : marginTop,
+      'opacity' : opacity
+    });
+  }
+
+  function fadeNav(windowScroll){
     //Fade the .nav out
+    var opacity = 1 - (windowScroll/400);
+    if (opacity < 0){
+      opacity = 0;
+    }
     $nav.css({
-      'opacity' : 1-(windowScroll/400)
+      'opacity' : opacity
     });
   }
 
@@ -109,9 +116,6 @@ $(function() {
 
 	}
 	$subtitle.remove();
-
-  // trigger a recalc if we're already scrolled
-  slidingTitle();
 
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);

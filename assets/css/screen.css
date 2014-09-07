@@ -106,14 +106,14 @@ header#teaser h1 {
 /* Links
 ================================================== */
 a {
-  color: #F40034;
+  color: #c03f21;
   text-decoration: none;
   -webkit-transition: color .2s ease-in-out;
      -moz-transition: color .2s ease-in-out;
           transition: color .2s ease-in-out;
 }
 a:hover {
-  color: #F40034;
+  color: #c03f21;
 }
 
 /*  Layout
@@ -153,8 +153,9 @@ a:hover {
   height: 70px;
   padding-top: 40px;
   margin-left: -490px; /* Half width of nav */
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #c03f21; /* Wizard Orange */
   z-index: 2;
+  opacity: 0;
 }
 .nav.fixed {
   position: fixed;
@@ -283,7 +284,7 @@ div.cover > img {
 }
 .art-body-inner {
   font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-  max-width: 640px;
+  max-width: 940px;
   padding: 80px 0 50px;
   letter-spacing: 0.01rem;
   font-weight: 400;
@@ -298,6 +299,7 @@ div.cover > img {
 .art-body-inner ul,
 .art-body-inner ol { /* For lists in the article body */
   margin-bottom: 26px;
+  margin-left: 2em;
 }
 .art-body-inner ul li {
   list-style: disc;
@@ -337,7 +339,6 @@ div.cover > img {
   margin-bottom: 0;
 }
 
-
 .dropcap { /* First character on articles */
   float: left;
   margin: 47px 10px 20px 0;
@@ -358,7 +359,7 @@ div.cover > img {
   max-height: 600px;
   margin-bottom: 26px;
 }
-.art-body-inner img.center {
+.art-body-inner img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -558,39 +559,25 @@ nav.pagination{
 
 /*  Code
 ================================================== */
-/*
-code, tt {
-background: #ededee;
-color: #3C4043;
-font-size: 90%;
-padding: 1px 3px;
-}
-
-pre {
-  width: 92%;
-  overflow: auto;
-  margin: 2rem 0;
-  padding: 1rem 0.8rem 1rem 1.2rem;
-  color: #3f3b36;
-  border: 1px solid #ccc;
-  border-left: 1rem solid #ccc;
-  font: lighter 1.2rem/2rem monospace;
-  background: url(/assets/img/pre.png) repeat 0 -0.9rem;
-  background-size: 1px 4rem;
-}
 
 pre code, tt {
-font-size: inherit;
-white-space: -moz-pre-wrap;
-white-space: pre-wrap;
-background: transparent;
-border: none;
-padding: 0;
+  white-space: pre-wrap;       /* CSS 3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
-*/
+
 
 .gist {
 	font-size: 14px;
+}
+
+
+/* Where I wish we had line numbers */
+.hljs {
+    border-left: 1ex solid #eee;
+    position: relative;
 }
 
 
