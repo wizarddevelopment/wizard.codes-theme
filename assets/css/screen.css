@@ -69,7 +69,7 @@ h5 {
   padding-bottom: 10px;
 }
 
-p {
+p, pre {
   margin: 0 0 28px 0;
 }
 
