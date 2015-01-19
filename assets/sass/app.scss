@@ -1,0 +1,93 @@
+html, body {
+  height: 100%;
+}
+
+@import "article";
+@import "index";
+@import "footer";
+@import "misc";
+@import "nav";
+@import "reset";
+@import "typography";
+
+// For code highlighting
+@import "_solarized_dark";
+
+// Layout
+// White container that is the "page"
+.wrapper {
+  min-height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+// Containers to keep content to a set width
+.footer, .art-list {
+  width: 980px;
+}
+
+.footer, .art-list {
+  position: relative;
+  margin: 0 auto;
+}
+
+// Home Page
+#home > div.cover {
+  max-width: 980px;
+  margin: 0px auto;
+  /*padding-top: 110px;*/
+}
+
+div.cover > img {
+  width: 100%;
+  height: 100%;
+}
+
+//  Responsive
+@media only screen and (max-width: 1080px) {
+  /* Set all of the 980 containers to flexible width */
+  .nav,
+  .art-body-inner,
+  .footer,
+  .art-list {
+    width: 90%;
+  }
+
+  .nav {
+    margin-left: -45%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+  .footer {
+    padding: 10px 0 20px;
+  }
+  .back-to-top,
+  .footer-nav {
+    width: 50%;
+  }
+  .back-to-top {
+    text-align: left;
+  }
+  .footer-nav {
+    text-align: right;
+  }
+  .offsite-links {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+  .offsite-links a {
+    font-size: 12px;
+  }
+  .art-list + .footer .footer-nav {
+    display: none;
+  }
+}

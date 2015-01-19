@@ -1,24 +1,41 @@
 {{!< default}}
 {{#post}}
 
-<article class="art simple {{post_class}}">
+<article class="art {{post_class}}">
 
-    <header class="art-header">
-        <div class="art-header-inner" style="margin-top: 0px; opacity: 1;">
-            <time class="art-time">{{date published_at format="MMMM Do, YYYY"}}</time>
-            <h2 class="art-title">{{title}}</h2>
-            <p class="art-subtitle"></p>
-        </div>
-    </header>
-
-    <div class="art-body">
-        <div class="art-body-inner">
-            {{#if featured}}
-            <hr class="featured-article" />
-            {{else}}{{/if}}
-            {{content}}
-        </div>
+  <header class="art-header">
+    <div class="art-header-inner">
+      <time class="art-time">{{date published_at format="MMMM Do, YYYY"}}</time>
+      <h2 class="art-title">{{title}}</h2>
+      <p class="art-subtitle"></p>
     </div>
+  </header>
+
+  <div class="art-body">
+    <div class="art-body-inner">
+
+      {{#if featured}}
+      <hr class="featured-article" />
+      {{/if}}
+
+      {{#if image}}
+      <img alt="cover" src="{{image}}">
+      {{/if}}
+
+      {{content}}
+
+      {{#author}}
+        <div class="art-author">
+          <img src="{{image}}">
+          <div class="info">
+            <time>Written on {{date published_at format="MMMM Do, YYYY"}}</time>
+            <h3><a href="{{url}}">{{name}}</a></h3>
+            <p>{{bio}}</p>
+          </div>
+        </div>
+      {{/author}}
+    </div>
+  </div>
 
 </article>
 

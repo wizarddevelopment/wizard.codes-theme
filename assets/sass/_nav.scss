@@ -1,0 +1,104 @@
+// Nav
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 70px;
+  padding-top: 40px;
+  width: 980px;
+  margin-left: -490px;
+  border-bottom: 1px solid #c03f21; // Wizard Orange
+  // z-index: 2;
+
+  @media only screen and (max-width: 1024px) {
+    /* Everything becomes scrolling and non-fading */
+    position: relative;
+    display: inline-block;
+  }
+
+  @media only screen and (max-width: 780px) {
+    padding-top: 25px;
+    height: 55px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .nav-primary li {
+      margin-left: 10px;
+    }
+    .logo h1 {
+      font-size: 16px;
+      letter-spacing: -1px;
+    }
+    li a {
+      font-size: 12px;
+    }
+  }
+
+  .nav-primary {
+    float: right;
+    li {
+      display: inline-block;
+      margin-left: 10px;
+      font-weight: 500;
+    }
+  }
+
+  .logo {
+    float: left;
+    h1 {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 30px;
+      color: #000;
+      text-transform: uppercase;
+
+      height: 30px;
+      margin-left: 0px;
+      letter-spacing: 1px;
+      font-family: 'Questrial', sans-serif;
+      font-size: 30px;
+      span {
+        color: #F40034 !important;
+      }
+
+    }
+  }
+  .nav-primary li {
+    font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 30px;
+    color: #000;
+    text-transform: uppercase;
+    a {
+      font-family: "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 30px;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+
+   li:first-child {
+    margin-left: 0;
+    /* Remove left margin from the first nav li */
+  }
+
+  //  White Reverse Theme
+  /* Nav */
+
+  .white & {
+    li {
+      a {
+        color: #fff;
+      }
+      color: #fff;
+    }
+    .logo h1 {
+      color: #fff;
+      background-position: top center;
+    }
+  }
+}

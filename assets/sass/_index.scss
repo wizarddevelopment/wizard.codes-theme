@@ -1,0 +1,55 @@
+//  List of Articles
+.art-list {
+  padding: 120px 0 0;
+}
+.art-list-body {
+  position: relative;
+  overflow: hidden;
+}
+.art-list-item {
+  padding: 30px 0;
+  list-style: none;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+.art-list-item:last-child {
+  border-bottom: none;
+}
+.art-list-title {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.art-list-item-title-and-time {
+  float: left;
+  width: 30%;
+  margin-bottom: 10px;
+}
+.art-list-time {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+.art-list-title a {
+  color: #000;
+}
+.art-list-title a:hover {
+  color: #F40034;
+}
+.art-list-item p {
+  width: 65%;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Remove prev & next links on loop */
+
+.art-list + .footer .footer-nav {
+  text-indent: -9999px;
+  text-align: left;
+}

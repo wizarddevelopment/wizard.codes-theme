@@ -1,0 +1,14 @@
+/* Reset & Basics (Inspired by E. Meyers)
+================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, time, nav, section {
+  display: block; }
+html, body, .wrapper {
+  min-height: 100%;
+}
