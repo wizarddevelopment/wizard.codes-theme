@@ -1,0 +1,278 @@
+//  Article
+.art {
+  margin-top: -131px;
+}
+
+/* Art header */
+
+.art-header {
+  // height: 900px;
+  /* Background image is defined in the post */
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .white & {
+    background-color: #111;
+    .art-time, .art-title, .art-subtitle {
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* Contains the time, title and subtitle for an article */
+.art-header-inner {
+  padding-top: 150px;
+  padding-bottom: 40px;
+
+  @media only screen and (min-width: 500px) {
+    padding-top: 190px;
+  }
+  @media only screen and (min-width: 1024px) {
+    padding-top: 300px;
+  }
+}
+
+.art-time,
+.art-title,
+.art-subtitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+.art-time {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 4px;
+}
+.art-title {
+  font-size: 100px;
+  line-height: .9;
+  letter-spacing: -2px;
+  width: 100%;
+}
+.art-subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 4px;
+}
+
+// If small header, make few adjustments
+.small .art-title {
+  font-size: 70px;
+  line-height: 65px;
+}
+.small.art-header-inner {
+  top: 320px;
+}
+
+// Body
+.art-body {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+  -webkit-box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+          box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+}
+
+.art-body-inner {
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  max-width: 940px;
+  padding: 40px 0 50px;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.5;
+  position: relative;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 500px) {
+    padding-top: 30px;
+  }
+}
+
+.art-body-inner a:hover {
+  border-bottom: 1px solid #F40034;
+  padding-bottom:2px;
+}
+
+.art-body-inner ul,
+.art-body-inner ol { /* For lists in the article body */
+  margin-bottom: 26px;
+  margin-left: 2em;
+}
+.art-body-inner ul li {
+  list-style: disc;
+}
+
+.art-body-inner mark {
+    background-color: #fdffb6;
+    padding: 2px;
+    -webkit-box-shadow: #fdffb6 0 0 5px;
+    -moz-box-shadow: #fdffb6 0 0 5px;
+    box-shadow: #fdffb6 0 0 5px;
+}
+
+.art-body-inner blockquote {
+  font-size: 16px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.art-body-inner blockquote p:first-child:before {
+  color: #ccc;
+  content: "“";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.art-body-inner blockquote p {
+  margin-bottom: 1.5em;
+}
+
+.art-body-inner blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.dropcap { /* First character on articles */
+  float: left;
+  margin: 47px 10px 20px 0;
+  font-size: 100px;
+  line-height: 0;
+}
+.art-subhead { /* Subheads are used to break up sections of an article */
+  margin: 60px 0 15px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+.callout { /* Callouts are like large pullquotes */
+  font-weight: bold;
+}
+.art-body-inner img {
+  max-width: 100%;
+  max-height: 600px;
+  margin-bottom: 26px;
+}
+.art-body-inner img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-body-inner .art-reference {
+  font-size: 80%;
+  color: #999;
+  margin-top: 50px;
+}
+
+/* For simple, white background posts */
+.art-body {
+  background: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+
+// From misc
+// .art-header-inner {
+//   -webkit-animation: le-fade .5s 0 1 ease-out;
+//   -moz-animation: le-fade .5s 0 1 ease-out;
+// }
+
+.art-list,
+.nav,
+.art-body {
+  -webkit-animation: le-fade .5s 0s 1 ease-out;
+  -moz-animation: le-fade .5s 0s 1 ease-out;
+}
+
+hr.featured-article {
+  padding: 0;
+  border: none;
+  border-top: medium double #bbb;
+  color: #bbb;
+  text-align: center;
+  &:after {
+    content: "✭ Featured Article ✭";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 1.2em;
+    padding: 0 0.6em;
+    background: white;
+  }
+}
+
+.art-author {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  // border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 25px 25px;
+
+  .info {
+    float: left;
+    margin-left: 25px;
+  }
+
+  time {
+    color: rgba(0,0,0,0.3);
+    font-size: 11px;
+  }
+
+  img {
+    float: left;
+    width: 60px;
+  }
+
+  h3 {
+    font-size: 16px;
+    padding-bottom: 0;
+  }
+  p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.44);
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .art-body-inner ul,
+  .art-body-inner ol {
+    margin-left: 20px;
+  }
+  .art-title {
+    letter-spacing: 0;
+  }
+  .art-subtitle,
+  .art-time {
+    font-size: 12px;
+  }
+  .art-list-item-title-and-time,
+  .art-list-item p {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .art-list {
+    padding-top: 0;
+  }
+}
+
+// Pagination nav
+nav.pagination {
+  text-align: right;
+  padding-bottom: 25px;
+}
+

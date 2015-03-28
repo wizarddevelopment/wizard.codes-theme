@@ -1,0 +1,41 @@
+//  Misc
+::selection {
+  background: #000;
+  color: #fff;
+}
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+img {
+  &.left {
+    float: left;
+    margin-right: 20px;
+  }
+  &.right {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.05);
+}
+
+// Clearfixing pile
+.nav:before, .art-body-inner:before, .footer:before, .art-list:before {
+  content: "";
+  display: table;
+}
+
+.nav:after, .art-body-inner:after, .footer:after, .art-list:after {
+  clear: both;
+}
+
+.nav, .art-body-inner, .footer, .art-list {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
