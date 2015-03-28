@@ -6,10 +6,9 @@
 /* Art header */
 
 .art-header {
-  // height: 900px;
   /* Background image is defined in the post */
   background-position: top center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -25,13 +24,15 @@
 /* Contains the time, title and subtitle for an article */
 .art-header-inner {
   padding-top: 150px;
-  padding-bottom: 40px;
+  padding-bottom: 150px;
+  max-width: 80%;
+  margin: 0 auto;
 
   @media only screen and (min-width: 500px) {
     padding-top: 190px;
   }
   @media only screen and (min-width: 1024px) {
-    padding-top: 300px;
+    padding-top: 400px;
   }
 }
 

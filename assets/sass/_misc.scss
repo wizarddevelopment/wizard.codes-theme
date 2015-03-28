@@ -26,16 +26,16 @@ hr {
 }
 
 // Clearfixing pile
-.nav:before, .art-body-inner:before, .footer:before, .art-list:before {
+.art-author:before, .nav:before, .art-body-inner:before, .footer:before, .art-list:before {
   content: "";
   display: table;
 }
 
-.nav:after, .art-body-inner:after, .footer:after, .art-list:after {
+.art-author:after, .nav:after, .art-body-inner:after, .footer:after, .art-list:after {
   clear: both;
 }
 
-.nav, .art-body-inner, .footer, .art-list {
+.art-author, .nav, .art-body-inner, .footer, .art-list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */
 }
