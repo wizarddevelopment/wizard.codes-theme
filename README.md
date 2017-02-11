@@ -1,4 +1,6 @@
 # Setup for dev
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/wizarddevelopment/wizard.codes-theme.svg)](https://greenkeeper.io/)
  - `gem install sass`
  - `npm install`
  - `grunt watch`
